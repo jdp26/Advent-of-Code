@@ -1,0 +1,13 @@
+#include <stdio.h>
+int main(){	
+	FILE* input;	
+	input=fopen("input.txt", "r");
+	double count=0;
+	double read;
+	while(fscanf(input,"%lf",&read)>0){
+		printf("%g\n", read);
+		count=count+read;
+	}
+	printf("Total: %g", count);	
+	return 0;
+}
